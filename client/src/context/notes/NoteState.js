@@ -5,7 +5,7 @@ const NoteState = (props) => {
     const initialNote = [];
     const [notes, setNotes] = useState(initialNote);
     const PORT = process.env.PORT || 5000;
-    const host = `https://to-do-task-web-application.herokuapp.com:${PORT}/api`
+    const host = `http://localhost:${PORT}/api`
 
     //fetch All Notes.
     const fetchAllNotes = async () => {

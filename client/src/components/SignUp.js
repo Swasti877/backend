@@ -5,7 +5,7 @@ export default function SingUp(props) {
     const [cred, setCred] = useState({ username: "", password: "", email: "", cpassword: "" })
     const navigate = useNavigate();
     const PORT = process.env.PORT || 5000;
-    const host = `https://to-do-task-web-application.herokuapp.com:${PORT}/api`
+    const host = `http://localhost:${PORT}/api`
     const { showAlert } = props;
 
     const onChange = (e) => {
