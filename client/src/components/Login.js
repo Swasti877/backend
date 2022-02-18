@@ -6,8 +6,10 @@ export default function Login(props) {
     const { showAlert } = props;
     const navigate = useNavigate();
     const PORT = process.env.PORT || 5000;
-    const host = `http://localhost:${PORT}/api`
+    const DOMAIN = process.env.DOMAIN || "http://localhost:"
+    const host = `${DOMAIN}${PORT}/api`
     // `http://localhost:${PORT}/api`
+    
     const onChange = (e) => {
         setCred({ ...cred, [e.target.name]: e.target.value })
     }

@@ -5,7 +5,8 @@ export default function SingUp(props) {
     const [cred, setCred] = useState({ username: "", password: "", email: "", cpassword: "" })
     const navigate = useNavigate();
     const PORT = process.env.PORT || 5000;
-    const host = `http://localhost:${PORT}/api`
+    const DOMAIN = process.env.DOMAIN || "http://localhost:"
+    const host = `${DOMAIN}${PORT}/api`
     const { showAlert } = props;
 
     const onChange = (e) => {

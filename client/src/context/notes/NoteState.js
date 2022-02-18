@@ -5,7 +5,8 @@ const NoteState = (props) => {
     const initialNote = [];
     const [notes, setNotes] = useState(initialNote);
     const PORT = process.env.PORT || 5000;
-    const host = `http://localhost:${PORT}/api`
+    const DOMAIN = process.env.DOMAIN || "http://localhost:"
+    const host = `${DOMAIN}${PORT}/api`
 
     //fetch All Notes.
     const fetchAllNotes = async () => {
